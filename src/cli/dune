@@ -1,5 +1,9 @@
 (executable
  (name octant)
+ (flags (:standard
+	-cclib -static-libgcc
+	-cclib -static
+	))
  (libraries term2 stackcl petrinet parsers)
  
  (preprocess (pps lwt_ppx)))
